@@ -10,25 +10,25 @@ git add .
 git commit -m "<nova_descricao>"
 git push -u origin master
 
----- Alterar alias origin do seu repositÛrio (ex: origin pra o)
+---- Alterar alias origin do seu reposit√≥rio (ex: origin pra o)
 git remote rename origin o
 
 ---- Obter (Atualizar e Mesclar pasta local):
 git pull
 
 ---- Clonar
-acessar a pasta onde quer baixar o repositÛrio
+acessar a pasta onde quer baixar o reposit√≥rio
 entrar no terminal
 digitar o seguinte comando:
 git clone https://github.com/nomedogit/projetodogit.git
 
----- Verificar se o remote est· baixado
+---- Verificar se o remote est√° baixado
 git remote -v
 
 ---- Listar branches
 git branch
 
----- Apagar branch. Com -D, apaga forÁado
+---- Apagar branch. Com -D, apaga for√ßado
 git branch -d <nome>
 
 ---- Baixar branch
@@ -46,17 +46,17 @@ git checkout -b <nome> [sha1, tag, branch]
 ---- Faz mescla na branch atual a prtir de outra
 git merge <branch>
 
----- Faz mescla sem gerar commit, deixa tudo no Ìndice antes
-git merge <branch> --squase
+---- Faz mescla sem gerar commit, deixa tudo no √≠ndice antes
+git merge <branch> --squash
 
----- Desfaz commits atuais, tr·s os commits da outra branch e reaplica os commits
+---- Desfaz commits atuais, tr√°s os commits da outra <branch> e reaplica os commits na branch selecionada
 git rebase <branch>
 
 ---- Remover arquivo da stage (que foi adicionado com git add .)
-git rm --cached <rota/arquivo.ext> --> arquivo especÌfico
+git rm --cached <rota/arquivo.ext> --> arquivo espec√≠fico
 git rm --cached .                  --> todos os arquivos (??)
 
----- Remover arquivo git que j· tinha sido inicializado
+---- Remover arquivo git que j√° tinha sido inicializado
 git rm -rf .git
 
 ---- Log 
@@ -64,9 +64,9 @@ git log
 
 
 ---- Merge vs Rebase
-Merge: Uni„o de duas alteraÁıes deixando a linha do tempo em paralelo.
-Rebase: Uni„o de duas alteraÁıes deixando a linha do tempo linear. 
+Merge: Uni√£o de duas altera√ß√µes deixando a linha do tempo em paralelo.
+Rebase: Uni√£o de duas altera√ß√µes deixando a linha do tempo linear. 
 
 
-Öor import code from another repository
+‚Ä¶or import code from another repository
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
