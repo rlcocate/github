@@ -1,0 +1,72 @@
+---- Criar:
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/nomedogit/projetodogit.git
+git push -u origin master
+
+---- Atualizar (Subir):
+git add .
+git commit -m "<nova_descricao>"
+git push -u origin master
+
+---- Alterar alias origin do seu repositório (ex: origin pra o)
+git remote rename origin o
+
+---- Obter (Atualizar e Mesclar pasta local):
+git pull
+
+---- Clonar
+acessar a pasta onde quer baixar o repositório
+entrar no terminal
+digitar o seguinte comando:
+git clone https://github.com/nomedogit/projetodogit.git
+
+---- Verificar se o remote está baixado
+git remote -v
+
+---- Listar branches
+git branch
+
+---- Apagar branch. Com -D, apaga forçado
+git branch -d <nome>
+
+---- Baixar branch
+git fetch origin <nome_da_branch> 
+Exemplo: git fetch origin dev
+
+---- Alterar pra branch baixada
+git checkout <nome_da_branch>
+Exemplo: git checkout dev
+
+
+---- Criar nova branch a partir de commit, tag ou branch existente
+git checkout -b <nome> [sha1, tag, branch]
+
+---- Faz mescla na branch atual a prtir de outra
+git merge <branch>
+
+---- Faz mescla sem gerar commit, deixa tudo no índice antes
+git merge <branch> --squase
+
+---- Desfaz commits atuais, trás os commits da outra branch e reaplica os commits
+git rebase <branch>
+
+---- Remover arquivo da stage (que foi adicionado com git add .)
+git rm --cached <rota/arquivo.ext> --> arquivo específico
+git rm --cached .                  --> todos os arquivos (??)
+
+---- Remover arquivo git que já tinha sido inicializado
+git rm -rf .git
+
+---- Log 
+git log 
+
+
+---- Merge vs Rebase
+Merge: União de duas alterações deixando a linha do tempo em paralelo.
+Rebase: União de duas alterações deixando a linha do tempo linear. 
+
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
