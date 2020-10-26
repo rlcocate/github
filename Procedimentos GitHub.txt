@@ -10,6 +10,37 @@ git add .
 git commit -m "<nova_descricao>"
 git push -u origin master
 
+---- Adicionar Arquivos e Diretórios
+git add .       --> adiciona todos os arquivos no mesmo diretório
+git add --all   --> adiciona todos os arquivos e diretórios existentes (em qualquer nível)
+
+---- Verificar Status dos arquivos (novo, modificado, excluído...)
+git status
+
+---- Verificar Status dos arquivos - de forma reduzida
+git status -s
+
+---- Amend => Juntar outras alterações no último commit feito
+git commit --amend --no-edit
+
+---- Stash => Armazenar alterações realizadas até o momento temporariamente
+git add .
+git stash
+--> o arquivo retorna imediatamente pro estado original
+
+---- Listar Stashs criadas
+git stash list
+
+--- Limpar todas as Stashs criadas: Mata todo o histórico de alterações salvas
+git stash clear
+
+---- Retornar alterações armazenadas no Stash e mantem no histórico
+git stash apply
+
+---- Retornar alterações armazenadas no Stash e limpa do histórico
+git stash pop
+
+
 ---- Alterar alias origin do seu repositório (ex: origin pra o)
 git remote rename origin o
 
@@ -72,6 +103,12 @@ git rm -rf .git
 
 ---- Log 
 git log 
+
+---- Log em uma linha 
+git log --oneline
+
+---- Log formatado / personalizado
+git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
 
 ---- Merge vs Rebase
 Merge: União de duas alterações deixando a linha do tempo em paralelo.
