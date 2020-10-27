@@ -14,6 +14,20 @@ git push -u origin master
 git add .       --> adiciona todos os arquivos no mesmo diretório
 git add --all   --> adiciona todos os arquivos e diretórios existentes (em qualquer nível)
 
+---- Reverter arquivos adicionados pelo "git add"
+git reset | git reset <nome_arquivo>
+
+---- Limpar tudo o que está acima daquela ID pra reverter - Usa o ID (Hash - Completa ou Reduzida)
+git reset <id_hash__commit> --soft|mixed|hard
+
+-- soft: remove todo o commit realizado, retornando para stage. 
+Define o head da branch para o commit anterior.
+** Pode ser usado pra renomear um commit, por exemplo.
+
+-- mixed: remove o commit e o add realizado anteriormente. Volta pra workspace.
+
+-- hard: remove o commit, o add e desfaz efetivamente todas as alterações feitas, voltando para o estado anterior dos arquivos e alterações. 
+
 ---- Verificar Status dos arquivos (novo, modificado, excluído...)
 git status
 
@@ -39,7 +53,6 @@ git stash apply
 
 ---- Retornar alterações armazenadas no Stash e limpa do histórico
 git stash pop
-
 
 ---- Alterar alias origin do seu repositório (ex: origin pra o)
 git remote rename origin o
