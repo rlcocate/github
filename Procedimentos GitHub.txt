@@ -14,7 +14,7 @@ git push -u origin master
 git add .       --> adiciona todos os arquivos no mesmo diretório
 git add --all   --> adiciona todos os arquivos e diretórios existentes (em qualquer nível)
 
----- Reverter arquivos adicionados pelo "git add"
+---- Reverter operação do "git add"
 git reset | git reset <nome_arquivo>
 
 ---- Limpar tudo o que está acima daquela ID pra reverter - Usa o ID (Hash - Completa ou Reduzida)
@@ -97,6 +97,23 @@ Exemplo: git checkout dev
 
 ---- Criar nova branch a partir de commit, tag ou branch existente
 git checkout -b <nome> [sha1, tag, branch]
+
+---- Desfazer uma alteração em arquivo que está na "Unstaged Area"
+git checkout <nome_arquivo>
+
+---- Remover arquivos que estão "untracked" pelo git
+git clean -n  --> exibe quais arquivos serão removidos
+git clean -nd --> ativa modo recursivo e exibe arquivos e diretórios que serão removidos
+git clean -d  --> remove diretório
+git clean -f  --> force pra remover os arquivos
+
+---- Remover arquivos que estão "tracked" pelo git
+git rm <nome_arquivo>
+--> marca o arquivo para exclusão
+--> fazer o commmit para excluir
+git rm routes -r
+--> marca o diretório para exclusão
+--> fazer o commmit para excluir
 
 ---- Faz mescla na branch atual a prtir de outra
 git merge <branch>
