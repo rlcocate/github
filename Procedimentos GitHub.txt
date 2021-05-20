@@ -84,8 +84,11 @@ git config --global --edit
 ---- Listar branches
 git branch
 
----- Apagar branch. Com -D, apaga forçado
+---- Excluir branch (local). Com -D, apaga forçado
 git branch -d <nome>
+
+---- Excluir branch (remote): Usar push
+git push origin --delete feature/R20_12_08998_CampanhaNPS
 
 ---- Baixar branch
 git fetch origin <nome_da_branch> 
